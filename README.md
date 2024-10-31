@@ -133,11 +133,11 @@ We build a multi-modal large language model for 3D scene understanding, excellin
 
 If you find this project useful in your research, please consider cite:
 ```BibTeX
-@article{huang2023chat,
-  title={Chat-Scene: Bridging 3D Scene and Large Language Models with Object Identifiers},
-  author={Huang, Haifeng and Wang, Zehan and Huang, Rongjie and Liu, Luping and Cheng, Xize and Zhao, Yang and Jin, Tao and Zhao, Zhou},
-  journal={arXiv preprint arXiv:2312.08168},
-  year={2023}
+@article{huang2024chat,
+  title={Chat-scene: Bridging 3d scene and large language models with object identifiers},
+  author={Huang, Haifeng and Chen, Yilun and Wang, Zehan and Huang, Rongjie and Xu, Runsen and Wang, Tai and Liu, Luping and Cheng, Xize and Zhao, Yang and Pang, Jiangmiao and others},
+  journal={Proceedings of the Advances in Neural Information Processing Systems, Vancouver, BC, Canada},
+  year={2024}
 }
 @article{wang2023chat,
   title={Chat-3d: Data-efficiently tuning large language model for universal dialogue of 3d scenes},
