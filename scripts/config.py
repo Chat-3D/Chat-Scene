@@ -197,11 +197,11 @@ val_file_dict = {
         seg_val_attr_file,
         f"{anno_root}/sqa3d_val.json"
     ],
-    'sqa3d_val': [
-        seg_feat_file,
-        seg_img_feat_file,
-        seg_val_attr_file,
-        f"{anno_root}/sqa3d_val.json"
+    'sqa3d_test': [
+        seg_all_feat_file,
+        seg_all_img_feat_file,
+        seg_all_attr_file,
+        f"{anno_root}/sqa3d_test.json"
     ],
     'multi3dref': [
         seg_feat_file,
