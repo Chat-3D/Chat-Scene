@@ -80,7 +80,7 @@ We build a multi-modal large language model for 3D scene understanding, excellin
 - Download LLM backbone:
   -  We use Vicuna-7B v1.5 in our experiments, which can be downloaded from [Hugging Face](https://huggingface.co/lmsys/vicuna-7b-v1.5).
 
-  - Change the `llama_model_path` in [config.py](./scripts/config.py) to the path of `vicuna-7b-v1.5`.
+  - Change the `llama_model_path` in [run.sh](./scripts/run.sh) to the path of `vicuna-7b-v1.5`.
   
 
 - Annotations and extracted features:
