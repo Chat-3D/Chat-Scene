@@ -25,4 +25,34 @@
 
     - We followed [OpenScene](https://github.com/pengsongyou/openscene)'s code to calculate the mapping between 3D points and 2D image pixels. This allows each object to be projected onto multi-view images. Based on the projected masks on the images, we extract and merge DINOv2 features from multi-view images for each object. 
 
-    - [TODO] Detailed implementation will be released.
+    - We provide modified code in the forked [repository](https://github.com/ZzZZCHS/openscene). Follow the installation [instruction](https://github.com/ZzZZCHS/openscene/blob/main/installation.md#installation-instruction) to setup the environment.
+
+    - Follow the [intruction](https://github.com/ZzZZCHS/openscene/blob/main/scripts/preprocess/README.md) of data preprocessing to process the scannet dataset.
+
+        - Download ScanNet v2 data from the official ScanNet website.
+
+        - Run the preprocessing code: (The code will generate the processed scannet data in the directory `scannet_2d`. We also provide the processed result [here](https://huggingface.co/datasets/ZzZZCHS/processed_scannet/blob/main/scannet_2d.tar.gz), you can directly download and unzip it.)
+
+            ```
+            cd scripts/preprocess
+            python prepare_2d_scannet.py \
+                --scannet_path /path/to/scannet/scans \
+                --output_path ../../data/scannet_2d \
+                --export_label_images \
+                --label_map_file /path/to/scannetv2-labels.combined.tsv
+                --output_image_width 640 \
+                --output_image_height 480
+            ```
+
+    - We follow their feature fusion [code](https://github.com/ZzZZCHS/openscene/blob/main/scripts/feature_fusion/scannet_openseg.py#L168) to use the PointCloudToImageMapper to calculate image pixel-3D points correspondances. 
+    
+        - The modified code is [here](https://github.com/ZzZZCHS/openscene/blob/main/scripts/feature_fusion/scannet_videofeat.py) for extract DINOv2 features.
+
+        - Run the code:
+            ```
+            python scripts/feature_fusion/scannet_videofeat.py \
+                --data_dir data/ \
+                --output_dir data/scannet_mask3d_videofeats
+            ```
+
+        - The output DINOv2 features are saved at `data/scannet_mask3d_videofeats.pt`.

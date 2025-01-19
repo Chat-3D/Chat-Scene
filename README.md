@@ -48,7 +48,7 @@ We build a multi-modal large language model for 3D scene understanding, excellin
 
   - Introduce a 2D token for each object, with 2D representations extracted from multi-view images using [DINOv2](https://github.com/facebookresearch/dinov2).
 
-  - Enable processing of 2D ego-centric video using a tracking-based detector when 3D input is unavailable.
+  - Enable processing of 2D video using a tracking-based detector when 3D input is unavailable.
 
   </details>
 
